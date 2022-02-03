@@ -2,7 +2,7 @@ function FindProxyForURL(url, host) {
   if (isPlainHostName(host)) {
     return "DIRECT";
   } else if (dnsDomainIs(host, ".proxy")) {
-    return "SOCKS5 localhost:4000; SOCKS localhost:4000;";
+    return "SOCKS localhost:4000; SOCKS5 localhost:4000;";
   } else {
     return "DIRECT";
   }
